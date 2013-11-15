@@ -89,8 +89,8 @@
     </section>
 
     <!-- This comment is exclusively designed to create a merge conflict
-         DEVLABS__UCV/UCAB
-         VERSION 2.002
+         DEVLABS USB
+         VERSION 1.01
       -->
 
     <section id="questions">
@@ -120,10 +120,9 @@
           subsecuencia “DD”.
         </h3>
         <div class="answer">
-          Coloca tu respuesta aquí.<br/>
-          Opcionalmente, puedes poner los archivos con la solución
-          en tu repositorio y poner la dirección del archivo acá.
-          Como por ejemplo: /Código/Scrabble.py
+         
+		  /codigo/problema.c
+		  
         </div>
       </article>
       <article id="q3">
@@ -133,7 +132,14 @@
           repo', 'dirty working tree' y 'merge conflict'.
         </h3>
         <div class="answer">
-          Coloca tus respuestas aquí.
+          
+		  Local Repo: consiste en tres "arboles" manejados por git: Working Directory, Index y HEAD.
+		  Working Directory: es aquél que contiene realmente los archivos actuales.
+		  Index: actúa como un área de ensayo en el cual se añaden o eliminan los archivos a los cuales se les hará un commit.
+		  Remote Repo: es aquel repositorio en la nube desde el cual podemos hacer pull y al cual hacemos los push para poder bajar y subir archivos.
+		  Dirty Working Tree: es aquel área de trabajo en el cual se realizaron cambios y no se le ha hecho el pull correspondiente, esto suele suceder en muchos branches que han sido inactivos por cierto tiempo.
+		  Merge Conflict: son los conflictos de escritura que ocurren cuando se desea hacer un merge entre branches y git no consigue establecer un acuerdo común entre el texto de uno y otro.
+		  
         </div>
       </article>
       <article id="q4">
@@ -163,19 +169,19 @@
             <tbody>
               <tr>
                 <th scope="row">working dir</th>
+                <td>R</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>W</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
               </tr>
               <tr>
                 <th scope="row">index</th>
+                <td>R</td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
                 <td>R/W</td>
                 <td></td>
                 <td></td>
@@ -184,12 +190,12 @@
               <tr>
                 <th scope="row">local repo</th>
                 <td></td>
-                <td></td>
-                <td></td>
                 <td>W</td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
+                <td>R/W</td>
+                <td>R</td>
+                <td>R</td>
               </tr>
               <tr>
                 <th scope="row">remote repo</th>
@@ -197,8 +203,8 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>R</td>
+                <td>R/W</td>
                 <td></td>
               </tr>
             </tbody>
